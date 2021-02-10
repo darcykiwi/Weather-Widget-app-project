@@ -52,6 +52,22 @@
 
         searchCity("London");
 
+        // current location button
+
+        function searchLocation(position) {
+            let apiKey = "dee40726329758523899886208514a2e";
+            let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
+           axios.get(apiUrl).then(showWeather);
+          }
+
+        function getCurrentLocation(event) {
+          event.preventDefault();
+        navigator.geolocation.getCurrentPosition(searchLocation);
+        }
+
+        let currentLocation = document.querySelector("#current-location");
+        currentLocation.addEventListener("click", getCurrentLocation);        
+
         // SOLUTION TO WEEK 5 HOMEWORK
 
         // [HANDLED THIS: SEPARATED MY BIGGER FUNCTION INTO SMALLER FUNCTIONS]
@@ -90,6 +106,8 @@
 
         // current location
 
+        // [HANDLED THIS: MADE THE 'CURRENT LOCATION' BUTTON CALL THE FUNCTIONS TO SHOW WEATHER OF CURRENT LOCATION]
+
         //function searchLocation(position) {
         //    let apiKey = //api Key;
         //    let apiUrl = //api URL;
@@ -103,3 +121,4 @@
 
         //let currentLocation = document.querySelector("#current-location");
         //currentLocation.addEventListener("click", getCurrentLocation);
+        // [HANDLED THIS: MADE THE 'CURRENT LOCATION' BUTTON CALL THE FUNCTIONS TO SHOW WEATHER OF CURRENT LOCATION]
