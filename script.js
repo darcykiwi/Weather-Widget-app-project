@@ -26,7 +26,7 @@
 
         // search city and fetch weather
 
-        function search(event) {
+        function handleSubmit(event) {
             event.preventDefault();
             let cityElement = document.querySelector("#entered-city");  
             let cityInput = document.querySelector("#city-input");
@@ -46,9 +46,9 @@
             }
 
         let searchForm = document.querySelector("#search-form");
-        searchForm.addEventListener("submit", search);
+        searchForm.addEventListener("submit", handleSubmit);
 
-        // Search Engine
+        // SOLUTION TO WEEK 5 HOMEWORK
 
         //function searchCity(city) {
         //    let apiKey = //api Key;
@@ -62,6 +62,8 @@
         //    searchCity(city);
         //}        
 
+
+        // [HANDLED THIS: INSERTED IT INTO MY CODE]
         //function displayWeatherCondition(response) {
         //  console.log(response.data);
         //  document.querySelector("#entered-city").innerHTML = response.data.name;
@@ -69,10 +71,12 @@
         //  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
         //  document.querySelector("#wind").innerHTML = response.data.main.wind.speed;
         //  document.querySelector("#description").innerHTML = response.data.weather[0].main;
-        //}
+        // [HANDLED THIS: INSERTED IT INTO MY CODE]
 
+        // [THIS IS ALREADY IN MY CODE]
         //let searchForm = document.querySelector("#search-form");
         //searchForm.addEventListener("submit", handleSubmit);
+        // [THIS IS ALREADY IN MY CODE] (will change function name to handleSubmit instead.)
 
         //searchCity("New York");
 
