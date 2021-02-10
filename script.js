@@ -54,3 +54,47 @@
 
         let searchForm = document.querySelector("#search-form");
         searchForm.addEventListener("submit", search);
+
+        // Search Engine
+
+        //function searchCity(city) {
+        //    let apiKey = "dee40726329758523899886208514a2e";
+        //    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`
+        //    axios.get(apiUrl).then(displayWeatherCondition);          
+        //}
+
+        //function handleSubmit(event) {
+        //    event.preventDefault();
+        //    let city = document.querySelector("#city-input").value;
+        //    searchCity(city);
+        //}        
+
+        //function displayWeatherCondition(response) {
+        //  console.log(response.data);
+        //  document.querySelector("#entered-city").innerHTML = response.data.name;
+        //  document.querySelector("#found-temperature").innerHTML = Math.round(response.data.main.temp);
+        //  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+        //  document.querySelector("#wind").innerHTML = response.data.main.wind.speed;
+        //  document.querySelector("#description").innerHTML = response.data.weather[0].main;
+        //}
+
+        //let searchForm = document.querySelector("#search-form");
+        //searchForm.addEventListener("submit", handleSubmit);
+
+        //searchCity("New York");
+
+        // current location
+
+        //function searchLocation(position) {
+        //    let apiKey = //api Key;
+        //    let apiUrl = //api URL;
+         //   axios.get(apiUrl).then(displayWeatherCondition);
+        //  }
+
+        //function getCurrentLocation(event) {
+        //  event.preventDefault();
+        //navigator.geolocation.getCurrentPosition(searchLocation);
+        //}
+
+        //let currentLocation = document.querySelector("#current-location");
+        //currentLocation.addEventListener("click", getCurrentLocation);
