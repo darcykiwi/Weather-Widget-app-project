@@ -37,19 +37,12 @@
         }
             
         function showWeather(response) {
-            let temperatureValue = document.querySelector("#found-temperature");
-            let displayedTemperature = Math.round(response.data.main.temp);
-            temperatureValue.innerHTML = `${displayedTemperature}°C`;
-
-            let weatherDescription = document.querySelector("#weather-description");
-            weatherDescription.innerHTML = response.data.weather[0].main;
-
-            let humidityValue = document.querySelector("#humidity");
-            humidityValue.innerHTML = `${response.data.main.humidity}%`
-
-            let windValue = document.querySelector("#wind");
-            let displayedWind = Math.round(response.data.wind.speed);
-            windValue.innerHTML = `${displayedWind}km/h`;
+          console.log(response.data);
+          document.querySelector("#entered-city").innerHTML = response.data.name;
+          document.querySelector("#found-temperature").innerHTML = Math.round(response.data.main.temp);
+          document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+          document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+          document.querySelector("#weather-description").innerHTML = response.data.weather[0].main;
             }
 
         let searchForm = document.querySelector("#search-form");
@@ -58,8 +51,8 @@
         // Search Engine
 
         //function searchCity(city) {
-        //    let apiKey = "dee40726329758523899886208514a2e";
-        //    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`
+        //    let apiKey = //api Key;
+        //    let apiUrl = //api Key;`
         //    axios.get(apiUrl).then(displayWeatherCondition);          
         //}
 
