@@ -50,19 +50,23 @@
         let searchForm = document.querySelector("#search-form");
         searchForm.addEventListener("submit", handleSubmit);
 
+        searchCity("London");
+
         // SOLUTION TO WEEK 5 HOMEWORK
 
+        // [HANDLED THIS: SEPARATED MY BIGGER FUNCTION INTO SMALLER FUNCTIONS]
         //function searchCity(city) {
         //    let apiKey = //api Key;
         //    let apiUrl = //api Key;`
         //    axios.get(apiUrl).then(displayWeatherCondition);          
-        //}
+        // [HANDLED THIS: SEPARATED MY BIGGER FUNCTION INTO SMALLER FUNCTIONS]
 
+        // [HANDLED THIS: SEPARATED MY BIGGER FUNCTION INTO SMALLER FUNCTIONS]
         //function handleSubmit(event) {
         //    event.preventDefault();
         //    let city = document.querySelector("#city-input").value;
         //    searchCity(city);
-        //}        
+        // [HANDLED THIS: SEPARATED MY BIGGER FUNCTION INTO SMALLER FUNCTIONS]     
 
 
         // [HANDLED THIS: INSERTED IT INTO MY CODE]
@@ -80,7 +84,9 @@
         //searchForm.addEventListener("submit", handleSubmit);
         // [THIS IS ALREADY IN MY CODE] (will change function name to handleSubmit instead.)
 
+        // [HANDLED THIS: THE DEFAULT cityElement VALUE TO NEATEN THE PAGE]
         //searchCity("New York");
+        // [HANDLED THIS: THE DEFAULT cityElement VALUE TO NEATEN THE PAGE]
 
         // current location
 
