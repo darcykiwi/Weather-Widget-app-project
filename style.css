@@ -1,30 +1,55 @@
-body {
-  background-image: linear-gradient(to right, #fff1eb 0%, #ace0f9 100%);
+header {
+  color: rgb(66, 30, 133);
+  text-align: center;
+}
+
+.weather-box-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
 }
 
 .weather-box {
   text-align: left;
   display: block;
-}
-
-.title-weather-widget {
-  text-align: center;
-  font-size: 50px;
-  color: rgb(0, 0, 78);
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #fff1eb 0%, #ace0f9 100%);
 }
 
 .current-location {
-  color: blueviolet;
-  font-weight: 200;
-  background: yellow;
+  color: rgb(70, 12, 83);
+  font-weight: 600;
+  background-image: linear-gradient(to right, #fff9f7 0%, #f2fbff 100%);
+  border: 1px solid rgb(62, 10, 129);
+  border-radius: 5%;
+  padding: 4px;
 }
 
 .entered-city {
   font-size: 36px;
 }
 
-.col {
+.weather-icon {
+  width: 100px;
+}
+
+.found-temperature {
+  font-size: 70px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.results-of-forecast {
   color: rgb(83, 83, 83);
-  text-decoration: underline;
-  font-size: 40px;
+  font-size: 20px;
+}
+
+.open-soure-link {
+  text-align: left;
+  margin: auto;
 }

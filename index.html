@@ -1,71 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/8757107071.js" crossorigin="anonymous"></script>
     <title>Weather Widget</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class=container>
-        <h1 class="title-weather-widget" id="title-weather-widget">
+        <header>
+        <h1>
             Weather Widget
         </h1>
+        <hr>
+        </header>    
+        <div class="weather-box-wrapper">    
         <div class="weather-box">
-            <hr>
             <br>
             <h2 class="date-time" id="date-time">
                 Date and Time
             </h2>
-
             <br>
-
-            <br>
-            <form class="search-form" id="search-form">
+            <div class="row">
+            <div class="col-6">
+              <form class="search-form" id="search-form">
                 <input type="text" placeholder="Search for a city" autocomplete="off" autofocus="on" id="city-input" />
-
-                <input type="submit" value="Search" />
+             <input type="submit" value="Search" />
+            </div>
             </form>
-            <br>
+            <div class="col-6">
             <button class="current-location" id="current-location">
                 Current Location
-            </button>
+            </button>      
+               </div> 
+            </div>
             <br>
-            <br>
-            <br>
+            <div class="results-of-current-weather">
+                <div class="row">
+            <div class="col-3">
             <h2 id="entered-city">
             </h2>
-            <br>
-            <p class="temperature">
+            <img src="https://images.squarespace-cdn.com/content/v1/5572b7b4e4b0a20071d407d4/1487090874274-FH2ZNWOTRU90UAF5TA2B/ke17ZwdGBToddI8pDm48kCMWMBFcqQftRz-JqZZoIB5Zw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVFI99ncPZu898P4WAmVYNBp8mgB1qWbp5RirnU_Xvq-XCb8BodarTVrzIWCp72ioWw/Weather+Targeting" alt="weather icon" class="weather-icon">
+            </div>
+            <div class="col-5">
+                <div class="temperature">
                 <span class="found-temperature" id="found-temperature">
                 </span>
                 <span class="units" id="units">
-                    °C
+                    °C | °F
                 </span>
-            </p>
-            <div id="weather-description">
-
+                </div>
             </div>
-
-            <p class="detailed-info">
-
-                <br>
+            <div class="col-4">
+            <ul class="detailed-info">
+                <li>
+                 <div id="weather-description">   
+                </li>
+                <li>
                 Humidity:
                 <span class="humidity" id="humidity">
                 </span>%
-                <br>
+                </li>
+                <li>
                 Wind:
                 <span class="wind" id="wind">
                 </span> km/h
-            </p>
+                </li>
+            </ul>
+            </div>
+            </div>
+            </div>
             <br>
-            <br>
+            <div class="results-of-forecast">
             <div class="row">
                 <div class="col">
                     Tomorrow <br> 8 Dec
@@ -83,7 +94,9 @@
                     Saturday <br> 12 Dec
                 </div>
             </div>
+            </div>
             <hr>
+            <div class="forecast">
             <div class="row">
                 <div class="col">
                     4°
@@ -101,14 +114,18 @@
                     8°
                 </div>
             </div>
+        </div>
             <br>
-            <div class="open-source-link">
+        </div>
+        <div class="open-source-link">
+                <small>
                 <a href="https://github.com/darcykiwi/Weather-Widget-app-project">
                     Open-source code
                 </a> 
                 by Darcy Keeble Watson
+                </small>
             </div>
-        </div>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>
