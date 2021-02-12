@@ -4,7 +4,7 @@ header {
 }
 
 .weather-box-wrapper {
-  max-width: 600px;
+  max-width: 700px;
   margin: 30px auto;
 }
 
@@ -14,7 +14,7 @@ header {
   padding: 20px;
   border: 1px solid;
   border-radius: 5px;
-  background-image: linear-gradient(to right, #fff1eb 0%, #ace0f9 100%);
+  background-image: linear-gradient(to right, #ace0f9 0%, #fff1eb 100%);
 }
 
 .current-location {
@@ -27,7 +27,7 @@ header {
 }
 
 .entered-city {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .weather-icon {
@@ -36,6 +36,10 @@ header {
 
 .found-temperature {
   font-size: 70px;
+}
+.detailed-info {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
 }
 
 ul {
