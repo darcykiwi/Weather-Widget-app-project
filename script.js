@@ -26,11 +26,18 @@
 
         // search city and fetch weather
 
+        function displayForecast(response) {
+          console.log(response.data);
+        }
+
         function searchCity(cityElement) {
             let apiKey = "dee40726329758523899886208514a2e";
-            let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityElement}&units=metric`;
-            axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeather);            
-        }
+            let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityElement}&appid=${apiKey}&units=metric`;
+            axios.get(`${apiUrl}&appid=${apiKey}`).then(showWeather);
+
+           apiUrl = `api.openweathermap.org/data/2.5/forecast?q=${cityElement}&appid=${apiKey}&units=metric`;
+           axios.get(apiUrl).then(displayForecast);        
+          }
 
         function handleSubmit(event) {
             event.preventDefault();
@@ -39,7 +46,6 @@
         }
             
         function showWeather(response) {
-          console.log(response.data);
           document.querySelector("#entered-city").innerHTML = response.data.name;
           document.querySelector("#found-temperature").innerHTML = Math.round(response.data.main.temp);
           document.querySelector("#humidity").innerHTML = response.data.main.humidity;
