@@ -85,7 +85,16 @@
           temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
         }
 
+        function displayCentigradeTemperature(event) {
+          event.preventDefault();
+          let temperatureElement = document.querySelector("#found-temperature");
+          temperatureElement.innerHTML = Math.round(centigradeTemperature);
+        }
+
         let fahrenheitLink = document.querySelector("#fahrenheit-link");
         fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+        let centigradeLink = document.querySelector("#centigrade-link");
+        centigradeLink.addEventListener("click", displayCentigradeTemperature);
 
         // default search result
