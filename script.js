@@ -46,6 +46,8 @@
           document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
           document.querySelector("#weather-description").innerHTML = response.data.weather[0].description;
 
+          centigradeTemperature = response.data.main.temp;
+
           let iconElement = document.querySelector("#weather-icon");
           iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
           iconElement.setAttribute("alt", response.data.weather[0].description);
@@ -54,7 +56,7 @@
         let searchForm = document.querySelector("#search-form");
         searchForm.addEventListener("submit", handleSubmit);
 
-        searchCity("London");
+        searchCity("London");      
 
         // current location button
 
@@ -71,3 +73,19 @@
 
         let currentLocation = document.querySelector("#current-location");
         currentLocation.addEventListener("click", getCurrentLocation);
+
+        // temperature unit conversion
+
+        let centigradeTemperature = null;
+
+        function displayFahrenheitTemperature(event) {
+          event.preventDefault();
+          let fahrenheitTemperature = (centigradeTemperature * 9 / 5) + 32;
+          let temperatureElement = document.querySelector("#found-temperature");
+          temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+        }
+
+        let fahrenheitLink = document.querySelector("#fahrenheit-link");
+        fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+        // default search result
