@@ -72,6 +72,28 @@ header {
 .found-temperature {
   font-size: 70px;
 }
+
+.clickable {
+  color: blue;
+  text-decoration: none;
+}
+
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.clickable:hover {
+  color: blue;
+  text-decoration: underline;
+}
 .detailed-info {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: capitalize;

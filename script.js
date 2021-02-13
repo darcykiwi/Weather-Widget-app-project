@@ -86,6 +86,11 @@
           let temperatureElement = document.querySelector("#found-temperature");
           temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 
+          centigradeLink.classList.add("clickable");
+          centigradeLink.classList.remove("active");
+          fahrenheitLink.classList.add("active");
+          fahrenheitLink.classList.remove("clickable");
+
           let imperialWindSpeed = document.querySelector("#wind");
           imperialWindSpeed.innerHTML = Math.round(metricWindSpeed / 1.609344);
           document.querySelector("#wind-speed-unit").innerHTML = "mph";
@@ -95,6 +100,11 @@
           event.preventDefault();
           let temperatureElement = document.querySelector("#found-temperature");
           temperatureElement.innerHTML = Math.round(centigradeTemperature);
+
+          centigradeLink.classList.remove("clickable");
+          centigradeLink.classList.add("active");
+          fahrenheitLink.classList.add("clickable");
+          fahrenheitLink.classList.remove("active");
 
           document.querySelector("#wind-speed-unit").innerHTML = "km/h";
         }
