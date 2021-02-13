@@ -47,6 +47,7 @@
           document.querySelector("#weather-description").innerHTML = response.data.weather[0].description;
 
           centigradeTemperature = response.data.main.temp;
+          metricWindSpeed = response.data.wind.speed;
 
           let iconElement = document.querySelector("#weather-icon");
           iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -77,18 +78,25 @@
         // temperature unit conversion
 
         let centigradeTemperature = null;
+        let metricWindSpeed = null;
 
         function displayFahrenheitTemperature(event) {
           event.preventDefault();
           let fahrenheitTemperature = (centigradeTemperature * 9 / 5) + 32;
           let temperatureElement = document.querySelector("#found-temperature");
           temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+
+          let imperialWindSpeed = document.querySelector("#wind");
+          imperialWindSpeed.innerHTML = Math.round(metricWindSpeed / 1.609344);
+          document.querySelector("#wind-speed-unit").innerHTML = "mph";
         }
 
         function displayCentigradeTemperature(event) {
           event.preventDefault();
           let temperatureElement = document.querySelector("#found-temperature");
           temperatureElement.innerHTML = Math.round(centigradeTemperature);
+
+          document.querySelector("#wind-speed-unit").innerHTML = "km/h";
         }
 
         let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -96,5 +104,3 @@
 
         let centigradeLink = document.querySelector("#centigrade-link");
         centigradeLink.addEventListener("click", displayCentigradeTemperature);
-
-        // default search result
