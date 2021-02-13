@@ -102,6 +102,9 @@ header {
 }
 .detailed-info {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.detailed-info:first-letter {
   text-transform: capitalize;
 }
 
@@ -112,8 +115,10 @@ ul {
 }
 
 .results-of-forecast {
-  color: rgb(83, 83, 83);
-  font-size: 20px;
+  color: rgb(131, 137, 163);
+  font-size: 15px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .open-soure-link {
