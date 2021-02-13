@@ -17,13 +17,52 @@ header {
   background-image: linear-gradient(to right, #ace0f9 0%, #fff1eb 100%);
 }
 
-.current-location {
-  color: rgb(70, 12, 83);
-  font-weight: 600;
-  background-image: linear-gradient(to right, #fff9f7 0%, #f2fbff 100%);
-  border: 1px solid rgb(62, 10, 129);
-  border-radius: 5%;
-  padding: 4px;
+.search-button {
+  color: white;
+  border: 1px solid #8468ff;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #0b5ed7;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.search-button:hover {
+  transition: 0.15s ease-in-out;
+  background-color: #106ffd;
+}
+
+.current-location-button {
+  color: white;
+  border: 1px solid #0b5ed7;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #8468ff;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.current-location-button:hover {
+  transition: 0.15s ease-in-out;
+  background-color: #9e88ff;
 }
 
 .entered-city {
