@@ -63,7 +63,7 @@
 
         function searchLocation(position) {
             let apiKey = "dee40726329758523899886208514a2e";
-            let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
+            let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
            axios.get(apiUrl).then(showWeather);
           }
 
