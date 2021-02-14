@@ -57,13 +57,13 @@
 
           let apiKey = "dee40726329758523899886208514a2e";
            apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${response.data.name}&appid=${apiKey}&units=metric`;
-           axios.get(apiUrl).then(displayForecast);           
+           axios.get(apiUrl).then(displayForecast);
             }
 
         let searchForm = document.querySelector("#search-form");
         searchForm.addEventListener("submit", handleSubmit);
 
-        searchCity("London");      
+        searchCity("london");      
 
         // current location button
 
@@ -146,6 +146,7 @@
           forecast = response.data.list[index];                    
           forecastElement.innerHTML += `
           <div class="col-2">
+          <div class="forecast-column">
           <h2 class="forecast-times">
           ${formatHours(forecast.dt * 1000)}
            </h2>
@@ -153,7 +154,8 @@
          <div class="forecast-temperature">
          <strong>${Math.round(forecast.main.temp_max)}°C</strong> ${Math.round(forecast.main.temp_min)}°C
           </div>
-            </div>
+          </div>
+          </div>
           `;            
           }
         } 
