@@ -101,11 +101,12 @@ header {
   text-decoration: underline;
 }
 .detailed-info {
-  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 20px;
 }
 
 .detailed-info:first-letter {
   text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {
@@ -119,6 +120,11 @@ ul {
   font-size: 15px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.forecast-times {
+  font-size: 20px;
+  text-align: center;
 }
 
 .open-soure-link {
