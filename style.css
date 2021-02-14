@@ -127,6 +127,7 @@ header {
 .detailed-info {
   margin-top: 20px;
   margin-left: 45px;
+  margin-right: -40px;
   font-size: 20px;
   color: #5d5d5d;
   font-weight: 500;
