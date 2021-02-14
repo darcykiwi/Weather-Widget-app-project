@@ -25,41 +25,6 @@
         dateAndTime.innerHTML = formatDateTime(currentTime);
 
         // search city and fetch weather
-
-         function formatHours(timestamp) {
-          let date = new Date(timestamp);
-         let hours = date.getHours();
-         if (hours < 10) {
-          hours = `0${hours}`;
-          }
-         let minutes = date.getMinutes();
-         if (minutes < 10) {
-           minutes = `0${minutes}`;
-         }
-
-          return `${hours}:${minutes}`;
-    }
-
-        function displayForecast(response) {
-          let forecastElement = document.querySelector("#weather-forecast");
-          forecastElement.innerHTML = null;
-          let forecast = null;
-
-          for (let index = 0; index < 6; index++) {
-          forecast = response.data.list[index];                    
-          forecastElement.innerHTML += `
-          <div class="col-2">
-          <h2 class="forecast-times">
-          ${formatHours(forecast.dt * 1000)}
-           </h2>
-         <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="">           
-         <div class="forecast-temperature">
-         <strong>${Math.round(forecast.main.temp_max)}°C</strong> ${Math.round(forecast.main.temp_min)}°C
-          </div>
-            </div>
-          `;            
-          }
-        } 
        
         function searchCity(cityElement) {
             let apiKey = "dee40726329758523899886208514a2e";
@@ -151,3 +116,40 @@
 
         let centigradeLink = document.querySelector("#centigrade-link");
         centigradeLink.addEventListener("click", displayCentigradeTemperature);
+
+        // forecast
+
+          function formatHours(timestamp) {
+          let date = new Date(timestamp);
+         let hours = date.getHours();
+         if (hours < 10) {
+          hours = `0${hours}`;
+          }
+         let minutes = date.getMinutes();
+         if (minutes < 10) {
+           minutes = `0${minutes}`;
+         }
+
+          return `${hours}:${minutes}`;
+    }
+
+        function displayForecast(response) {
+          let forecastElement = document.querySelector("#weather-forecast");
+          forecastElement.innerHTML = null;
+          let forecast = null;
+
+          for (let index = 0; index < 6; index++) {
+          forecast = response.data.list[index];                    
+          forecastElement.innerHTML += `
+          <div class="col-2">
+          <h2 class="forecast-times">
+          ${formatHours(forecast.dt * 1000)}
+           </h2>
+         <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="">           
+         <div class="forecast-temperature">
+         <strong>${Math.round(forecast.main.temp_max)}°C</strong> ${Math.round(forecast.main.temp_min)}°C
+          </div>
+            </div>
+          `;            
+          }
+        } 

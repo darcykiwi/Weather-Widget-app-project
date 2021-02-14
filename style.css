@@ -35,7 +35,7 @@ header {
 }
 
 .search-button:hover {
-  transition: 0.15s ease-in-out;
+  transition: 0.2s ease-in-out;
   background-color: #106ffd;
 }
 
@@ -102,6 +102,9 @@ header {
 }
 .detailed-info {
   margin-top: 20px;
+  font-size: 20px;
+  color: #5d5d5d;
+  font-weight: 500;
 }
 
 .detailed-info:first-letter {
